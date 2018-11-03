@@ -75,10 +75,6 @@ class Beam():
         "Sort the scores."
         return torch.sort(self.scores, 0, True)
 
-    def get_the_best_score_and_idx(self):
-        "Get the score of the best in the beam."
-        scores, ids = self.sort_scores()
-        return scores[1], ids[1]
 
     def get_tentative_hypothesis(self):
         "Get the decoded sequence for the current timestep."
